@@ -1,0 +1,38 @@
+###recuperar todas las peliculas
+GET http://localhost:1234/movies
+
+###c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
+###
+GET http://localhost:1234/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
+
+
+###
+GET http://localhost:1234/movies?genre=Crime
+
+
+###
+POST  http://localhost:1234/movies
+Content-Type: application/json
+   
+   {
+    "title": "Intensamente",
+    "year": 1975,
+    "director": "Francis Ford Copola",
+    "duration": 175,
+    "poster": "https://imgs.search.brave.com/-P03Spru9YeaubWCmNwATsUBwZTQIz9FIf7ZPPe52Fg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9teC53/ZWIuaW1nMy5hY3N0/YS5uZXQvcl8xMjgw/XzcyMC9waWN0dXJl/cy8yMy8xMS8wOS8x/NS8zOC8wNDAyOTUx/LmpwZw",
+    "genre": [
+      "Action",
+      "Crime",
+      "Drama"
+    ]
+  }
+
+
+###
+PATCH   http://localhost:1234/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
+  Content-Type: application/json
+
+  {
+    "title":"Elverguitas",
+    "year": 2024
+  }
